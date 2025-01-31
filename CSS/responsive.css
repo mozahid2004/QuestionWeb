@@ -1,0 +1,19 @@
+@media (min-width: 720px) {
+    .hamburger{
+      display: none;
+    }
+
+}
+
+@media (max-width: 720px) {
+  .nav-links{
+    display: none;
+  }
+  .hero{
+    width: 100%;
+  }
+  .ChooseLanguage{
+    width: 100%;
+  }
+
+}
