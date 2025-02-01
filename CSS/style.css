@@ -4,13 +4,15 @@
   box-sizing: border-box;
 }
 
-body{
+body {
   background-color: black;
   color: aliceblue;
   font-family: sans-serif;
 }
+
 /* ********************* */
-.navbar{
+
+.navbar {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
@@ -21,15 +23,18 @@ body{
   height: 60px;
   text-align: center;
 }
-.nav-links{
+
+.nav-links {
   list-style-type: none;
   display: flex;
 }
+
 .navOpt:hover {
   transform: scale(1.11);
   color: #000;
 }
-.nav-links a{
+
+.nav-links a {
   text-decoration: none;
   padding: 10px 20px;
   color: white;
@@ -39,25 +44,67 @@ body{
   transition: all 1s;
 }
 
+.mobilelink {
+  background-color: rgba(0, 255, 64, 0.816);
+  position: fixed;
+  top: 0;
+  right: -90%;
+  width: 90vw;
+  height: 80vh;
+  z-index: 1;
+  background: rgba(0, 255, 100, 0.2);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 255, 100, 0.3);
+  box-shadow: 0px 5px 15px 10px rgba(0, 255, 100, .3);
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  gap: 150px;
+  font-size: 1.5rem;  
+  transition: all 1s ease-in;
+  text-align: center;
+}
+.myName{
+  font-size: 12px;
+}
+.show{
+  right: 0;
+}
+.mobilelink ul {
+  list-style-type: none;
+  width: 100%;
+  margin-top: 50px;
+  text-align: center;
+}
+.mobilelink a{
+  text-decoration: none;
+  color: #fff;
+}
+.mobilelink li{
+  padding: 10px 20px;
+  transition: all .3s ease-in;
+}
+.mobilelink li:hover{
+  background-color: rgba(0, 255, 100, 0.3)
+}
 @keyframes gradientAnimation {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
-.mobileNavlink{
-  background-color: rgba(21, 195, 178, 0.825);
-  width: 90vw;
-  min-height: 80vh;
-  z-index: 1;
-  list-style-type: none;
-  padding: 60px 30px;
-}
-.mobileNavlink a{
-  text-decoration: none;
-  padding: 20px 30px;
-  background-color: #ff416c;
-}
+
 
 /* BTN*************************************** */
 a.button {
@@ -71,7 +118,7 @@ a.button {
   background: linear-gradient(45deg, #ff416c, #ff4b2b);
   border-radius: 50px;
   overflow: hidden;
-  box-shadow: 0 0  10px rgba(255, 75, 43, 0.7);
+  box-shadow: 0 0 10px rgba(255, 75, 43, 0.7);
   transition: all 0.3s ease-in-out;
 }
 
@@ -81,7 +128,7 @@ a.button:hover {
 }
 
 /* ******************************* */
-.hamburger{
+.hamburger {
   width: 50px;
   position: absolute;
   right: 40px;
@@ -89,60 +136,69 @@ a.button:hover {
   overflow: hidden;
   z-index: 2;
 }
-.line{
+
+.line {
   width: 60px;
   border: 2px solid white;
   margin: 8px auto;
   transition: all .3s ease-in;
 }
 
-.cross{
+.cross {
   transform: rotate(45deg);
 }
-.cross2{
+
+.cross2 {
   transform: rotate(-45deg);
 }
-.cross:nth-child(2){
+
+.cross:nth-child(2) {
   display: none;
 }
+
 /* ********************************* */
-.logo{
+.logo {
   font-size: larger;
   transition: all .4s ease;
 }
-.logo span{
+
+.logo span {
   color: yellow;
 }
 
-.logo:hover{
+.logo:hover {
   transform: scale(1.3);
 }
 
-.hero{
+.hero {
   /* border: 2px solid ; */
   width: 80%;
   margin: auto;
-  padding: 0 20px ;
+  padding: 0 20px;
   position: relative;
   top: 40px;
 }
-.hero h1{
-    font-size: clamp(22px, 3vw, 40px);
-    padding: 10px;
+
+.hero h1 {
+  font-size: clamp(22px, 3vw, 40px);
+  padding: 10px;
 }
-.ChooseLanguage{
+
+.ChooseLanguage {
   /* border: 2px solid; */
   position: relative;
   top: 80px;
   width: 80%;
   margin: auto;
-  padding: 10px 20px ;
+  padding: 10px 20px;
   min-height: 400px;
 }
-.ChooseLanguage h2{
+
+.ChooseLanguage h2 {
   font-size: clamp(22px, 3vw, 32px);
 }
-.btnContainer{
+
+.btnContainer {
   /* border: 2px solid; */
   padding: 20px;
   margin-top: 20px;
@@ -151,10 +207,10 @@ a.button:hover {
   flex-wrap: wrap;
 }
 
-#mode{
+#mode {
   width: 60px;
   height: 30px;
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
   position: absolute;
   top: 14px;
   right: 140px;
@@ -163,24 +219,26 @@ a.button:hover {
   justify-content: start;
   align-items: center;
 }
-#mover{
+
+#mover {
   height: 28px;
   width: 28px;
-  background-color: #fff;
+  background-color: #000000;
   border-radius: 100%;
   transition: all .5s ease;
 }
 
-.move{
+.move {
   transform: translateX(108%);
-  
+
 }
-.black{
-  background-color: #000; 
+
+.black {
+  background-color: #000;
 }
-.white{
-  background-color:white;
+
+.white {
+  background-color: white;
 }
 
 /* *********************************** */
-
