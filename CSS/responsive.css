@@ -15,5 +15,16 @@
   .ChooseLanguage{
     width: 100%;
   }
+  .btnContainer{
+    gap: 10px;
+  }
+
+}
+
+
+@media (max-width: 720px) {
+  .htmlContainer{
+    width: 90%;
+  }
 
 }

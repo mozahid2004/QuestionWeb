@@ -1,5 +1,3 @@
-import htmlQuest from './htmlQuest.js'
-import renderHTML from './renderHTML.js';
  //*********** Dark Mode ******************
 
 const mover = document.querySelector('#mover');
@@ -21,7 +19,7 @@ mode.addEventListener('click', () => {
     mode.removeAttribute('style'); 
     document.body.removeAttribute('style');
     mnavOpt.forEach(element => {
-      console.log(element);
+      // console.log(element);
       element.style.color = 'white'
     }); 
     
@@ -35,7 +33,7 @@ mode.addEventListener('click', () => {
     mobilelink.style.color = 'black'
     mobilelink.style.backgroundColor = 'rgba(56, 88, 64, .9);'
     mnavOpt.forEach(element => {
-      console.log(element);
+      // console.log(element);
       element.style.color = 'black'
     });
   }
@@ -56,6 +54,5 @@ hamburger.addEventListener('click' , ()=>{
 })
 
 // printQuestion()
-console.log(htmlQuest)
+// console.log(htmlQuest)
 // console.log(renderHTML());
-

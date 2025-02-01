@@ -1,16 +1,28 @@
 import HtmlTopics from "./htmlQuest.js";
 
-const topics = document.querySelector('.topics')
-console.log(topics);
-// console.log("Mozahid");
 
 
-const renderHTML  = ()=>{
+const QuestionContainer = document.querySelector('.QuestionContainer')
+console.log(QuestionContainer);
 
-  console.log(HtmlTopics)
+const Question = HtmlTopics;
 
+const renderHTML = (Question)=>{
+  Question.forEach(element => {
+
+    const topics = document.createElement('p');
+    topics.classList.add('topics')
+
+    console.log(element);
+    topics.innerHTML = `
+    <p class="topicName">${element.topic}</p>
+    `;
+    
+    QuestionContainer.appendChild(topics)
+  });  
 }
 
-// renderHTML()
+renderHTML(Question)
+
 
 export default renderHTML;
