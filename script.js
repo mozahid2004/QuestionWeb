@@ -9,7 +9,7 @@ const lastLine = document.querySelector(".line:last-of-type");
 const mobilelink = document.querySelector('.mobilelink')
 const mnavOpt = document.querySelectorAll('.mnavOpt')
 
-mnavOpt.forEach('')
+
 
 mode.addEventListener('click', () => {
   if (mover.classList.contains('move')) {
@@ -17,7 +17,12 @@ mode.addEventListener('click', () => {
     mover.classList.remove('move');
     mover.removeAttribute('style'); 
     mode.removeAttribute('style'); 
-    document.body.removeAttribute('style'); 
+    document.body.removeAttribute('style');
+    mnavOpt.forEach(element => {
+      console.log(element);
+      element.style.color = 'white'
+    }); 
+    
   } else {
     // Apply dark mode styles
     mover.classList.add('move');
@@ -27,7 +32,10 @@ mode.addEventListener('click', () => {
     document.body.style.color = 'black';
     mobilelink.style.color = 'black'
     mobilelink.style.backgroundColor = 'rgba(56, 88, 64, .9);'
-    // mnavOpt.style.color = 'black'
+    mnavOpt.forEach(element => {
+      console.log(element);
+      element.style.color = 'black'
+    });
   }
 });
 
