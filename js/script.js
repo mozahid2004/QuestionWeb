@@ -1,4 +1,6 @@
-//*********** Dark Mode ******************
+import htmlQuest from './htmlQuest.js'
+import renderHTML from './renderHTML.js';
+ //*********** Dark Mode ******************
 
 const mover = document.querySelector('#mover');
 const mode = document.querySelector('#mode');
@@ -52,3 +54,8 @@ hamburger.addEventListener('click' , ()=>{
   mobilelink.classList.toggle('show')
 
 })
+
+// printQuestion()
+console.log(htmlQuest)
+// console.log(renderHTML());
+

@@ -259,3 +259,23 @@ a.button:hover {
 }
 
 /* *********************************** */
+
+.htmlContainer{
+  width: 70%;
+  margin: auto;
+  padding: 30px 10px;
+}
+.QuestionContainer{
+  min-height: 70vh;
+  padding: 10px 30px;
+  margin-top: 30px;
+  box-shadow: 2px -3px 30px 10px rgba(255, 75, 43, 0.3);
+}
+.topicsName{
+  padding: 5px 30px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  background-color:rgba(0, 208, 255, 0.664);
+  font-size: 20px;
+}
