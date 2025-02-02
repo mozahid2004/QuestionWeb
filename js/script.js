@@ -1,4 +1,5 @@
- //*********** Dark Mode ******************
+//*********** Dark Mode ******************
+
 
 const mover = document.querySelector('#mover');
 const mode = document.querySelector('#mode');
@@ -53,6 +54,4 @@ hamburger.addEventListener('click' , ()=>{
 
 })
 
-// printQuestion()
-// console.log(htmlQuest)
-// console.log(renderHTML());
+// call pages
