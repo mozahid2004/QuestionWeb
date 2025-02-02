@@ -8,6 +8,7 @@ body {
   background-color: black;
   color: aliceblue;
   font-family: Arial, Helvetica, sans-serif;
+  transition: all .5s ease;
 }
 
 /* ********************* */
@@ -33,7 +34,7 @@ body {
 .nav-links a {
   text-decoration: none;
   padding: 4px 0px;
-  color: white;
+  color: rgb(255, 255, 255);
   text-decoration: none;
   font-size: 18px;
   font-weight: 600;
@@ -296,12 +297,44 @@ a.button:hover {
 .questionBtn{
   background:blue;
 }
+.go-back-btn {
+  /* display: ; */
+  align-items: center;
+  padding: 12px 24px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+  position: fixed;
+  bottom: 15%;
+  right: 100px;
+  display: none;
+}
+
+.go-back-btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-6px);
+  box-shadow: 0 6px 12px rgba(0, 123, 255, 0.5);
+}
+
+.go-back-btn:active {
+  background-color: #004085;
+  transform: translateY(0);
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+}
+
 
 .AnswerHere{
   background-color: rgb(255, 0, 43);
   width: 70%;
   margin: auto;
-  display: flex;
+  display: block;
   justify-content: center;
   align-items: center;
   font-size: 25px;

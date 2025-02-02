@@ -1,6 +1,5 @@
 //*********** Dark Mode ******************
 
-
 const mover = document.querySelector('#mover');
 const mode = document.querySelector('#mode');
 const hamburger = document.querySelector('.hamburger')
@@ -9,6 +8,9 @@ const firstLine = document.querySelector(".line");
 const lastLine = document.querySelector(".line:last-of-type"); 
 const mobilelink = document.querySelector('.mobilelink')
 const mnavOpt = document.querySelectorAll('.mnavOpt')
+const navOpt = document.querySelectorAll('.navOpt')
+const navbar = document.querySelector('.navbar')
+// console.log(navbar);
 
 
 
@@ -20,9 +22,13 @@ mode.addEventListener('click', () => {
     mode.removeAttribute('style'); 
     document.body.removeAttribute('style');
     mnavOpt.forEach(element => {
-      // console.log(element);
-      element.style.color = 'white'
+      element.style.color = 'white' 
     }); 
+    navOpt.forEach(element => {
+      element.style.color = 'white'
+    })
+    navbar.style.backgroundColor = "black"
+    
     
   } else {
     // Apply dark mode styles
@@ -34,16 +40,16 @@ mode.addEventListener('click', () => {
     mobilelink.style.color = 'black'
     mobilelink.style.backgroundColor = 'rgba(56, 88, 64, .9);'
     mnavOpt.forEach(element => {
-      // console.log(element);
       element.style.color = 'black'
     });
+    navOpt.forEach(element => {
+      element.style.color = 'black'
+    })
+    navbar.style.backgroundColor = "pink"
   }
 });
 
 // *************Hamburgur*************************
-
-
-
 
 hamburger.addEventListener('click' , ()=>{
 

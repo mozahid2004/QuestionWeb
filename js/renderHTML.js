@@ -24,13 +24,15 @@ renderHTML(Question)
 
 // *********************************************
 
-const topic = document.querySelector('.topics')
-// console.log(topic);
 const card = document.querySelectorAll('.topicName')
 // console.log(card);
 let AnswerHere = document.querySelector('.AnswerHere')
 const htmlContainer = document.querySelector('.htmlContainer')
 console.log(htmlContainer);
+
+
+
+
 
 card.forEach((elem) => {
   // console.log(elem);
@@ -39,31 +41,40 @@ card.forEach((elem) => {
     // console.log(elem.innerHTML);
     // alert(id)
     htmlContainer.style.display = 'none'
+    goBack.style.display = 'inline-flex'
 
     const div = document.createElement('div');
     div.setAttribute('id', 'AnswerConatainer')
     div.innerHTML = elem.innerHTML;
 
+
     const existingDiv = document.getElementById('AnswerConatainer');
+    console.log(existingDiv);
     if (existingDiv) {
       existingDiv.remove();
     }
-    
+
     AnswerHere.appendChild(div)
-    
-    if (elem.innerHTML) {
-      // console.log('likha h');
-      let updateText = elem.innerHTML
-      // console.log(updateText);
-      updateText = " "
-    } else {
-      console.log('Khali h');
-    }
+
+    console.log(existingDiv);
   })
 })
 
 
 // **********************************************
+
+const goBack = document.querySelector('.go-back-btn ')
+
+goBack.addEventListener('click', () => {
+  htmlContainer.style.display = 'block'
+  
+  const existingDiv = document.getElementById('AnswerConatainer');
+  if(existingDiv){
+    existingDiv.style.display = 'none'
+  }
+  goBack.style.display = 'none'
+
+})
 
 
 
