@@ -24,9 +24,15 @@
 
 @media (max-width: 720px) {
   .htmlContainer{
+    width: 100%;
+  }
+  .AnswerHeadingHere{
     width: 90%;
   }
-  .AnswerHere{
+  .childhtmlcontainer{
+    width: 100%;
+  }
+  .QuestionHereContainer{
     width: 90%;
   }
 
